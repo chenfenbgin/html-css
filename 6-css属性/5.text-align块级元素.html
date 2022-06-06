@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        background-color: #ff0;
+        height: 300px;
+        /* 居中不了的。因为text-align： 只负责行内级元素，div不是。div是块级，可以改div属性 */
+        /* text-align: center; */
+      }
+      .content {
+        background-color: blue;
+        height: 200px;
+        width: 200px;
+        /* 
+          对于块级元素居中，有两种方式：
+          方式1： display: inline-block + text-align: center。这样就可以居中
+          方式2： margin: 0 auto
+          */
+        /* display: inline-block; */
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <!-- 居中不了的 -->
+      <div class="content"></div>
+    </div>
+  </body>
+</html>
