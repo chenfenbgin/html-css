@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .before {
+        color: red;
+      }
+      .after {
+        color: green;
+      }
+
+      /* 不加元素插入东西, 但是这么写不够通用，如果有box3 */
+      .item::before {
+        /* 要插入的元素 */
+        content: "前面";
+        color: red;
+        font-size: 30px;
+      }
+      .item::after {
+        /* 要插入的元素 */
+        /* content: "后面"; */
+        content: url("../images/favicon.ico"); /* 我们改成图片 */
+        color: red;
+        font-size: 30px;
+      }
+
+      .box4::after {
+        /* 使用伪元素的过程中，不要将content省略 */
+        content: "";
+        /* 不可省略，伪元素默认是一个行内非替换元素，width,height设置无效 */
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 需求：在div元素前面或者后面插入 -->
+    <div class="box">
+      <span class="before">前面</span>
+      我是div元素
+      <span class="after">后面</span>
+    </div>
+
+    <!-- 伪元素方案 -->
+    <!-- <div class="box2">我是div元素</div> -->
+
+    <!-- 通用写法，加上item -->
+    <div class="box2 item">我是div元素</div>
+    <div class="box3 item">我是div元素</div>
+
+    <div class="box4">我是div元素</div></div>
+  </body>
+</html>

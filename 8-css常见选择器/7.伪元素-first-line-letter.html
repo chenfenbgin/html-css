@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 500px;
+        background-color: red;
+        color: #fff;
+      }
+
+      /* 需求：第一行变大, 永远选中的是首行 */
+      .box::first-line {
+        font-size: 30px;
+        color: #ff0;
+      }
+  
+      /* 首字母 */
+      .box::first-letter {
+        font-size: 40px;
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      第26次新疆旅行，在伊宁喀赞其民俗村住了一晚，有种回到摩洛哥蓝城舍夫沙万的感觉。这里商业气氛不浓，很适合闲逛。
+      住在喀赞其的可赞小院，民宿有个很喜欢的院子，这个季节，院子里的杏子和桑葚成熟了，可以随意采摘。
+      入目是深深浅浅的蓝色，民宿还贴心的准备了免费的民族服装，可以穿着拍拍照片。
+      出去逛逛，回到民宿在院子里喝喝茶，就很惬意。如果可以，真想赖着几天不走了。
+      和可赞小院民宿的老板聊天，是个很有情怀的男人。他还带我们去参加了一场维吾尔族的婚礼，一会儿分享给你们～
+    </div>
+  </body>
+</html>
