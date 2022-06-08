@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 需求： 子元素距离父元素左上有间距
+         方案： padding 跟 margin
+      */
+      .box {
+        width: 300px;
+        height: 300px;
+        background-color: red;
+
+        /* padding-left: 20px; */
+        /* 如果改成padding-left: 100px。盒子会被撑开。
+           因为width和height只是在设置内容高度和宽度，一旦加上padding，
+           整个盒子的大小 = 内容 + padding.这个时候，应该使用box-sizing: border-box
+        */
+
+        /* 方式一： */
+        /* box-sizing: border-box;
+        padding-left: 100px; */
+
+        /* 触发BFC */
+        overflow: auto;
+      }
+
+      .container {
+        width: 100px;
+        height: 100px;
+        background-color: #ff0;
+
+        /* 方式二： 还有一种方法，就是margin-left,无须在设置box-sizing: border-box; */
+        margin-left: 100px;
+        /* margin-left这种方法也是存在问题的，
+          如果设置上面的margin-top:100px;会把属性传递给父元素
+          可以使用overflow: auto
+        */
+        margin-top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="container"></div>
+    </div>
+  </body>
+</html>

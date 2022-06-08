@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* box跟container之间是有间隙的，是由换行等造成的，可以通过font-size\浮动\flex布局解决 */
+      /* 如果有间距，设置margin就不准确了 */
+      body {
+        font-size: 0;
+      }
+      .box {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        /* margin-bottom: 30px; */
+      }
+      .container {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        /* 上下的magin会折叠，左右是不会的 */
+        /* margin-top: 30px; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <div class="container"></div>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        background-color: red;
+
+        /* width如果没有设置，默认是auto, auto 交给浏览器来决定 */
+        /* 块级元素，width:auto: 独占一行（父元素的一行，当前父元素是body） */
+        width: auto;
+      }
+
+      .title {
+        /* 行内级非替换元素设置宽高无效 */
+        /* width: auto; */
+
+        /* 如果是行内级，width: auto：包裹内容 */
+        display: inline-block;
+        width: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">我是div元素</div>
+
+    <span class="title">我是span元素</span>
+
+    <!-- 根据图片的宽度 -->
+    <img src="../images/muxing.jpg" alt="" />
+  </body>
+</html>
