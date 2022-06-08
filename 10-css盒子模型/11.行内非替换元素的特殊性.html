@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .content {
+        background-color: red;
+        color: #fff;
+
+        /* 内容： width/height(压根不生效) */
+        width: 300px;
+        height: 300px;
+
+        /* 特殊1:padding： 内边距是有生效的，padding-top无效 
+           行内非替换元素，设置左右padding是会占据空间的。
+           但是，上下的padding，会被撑起来，但是不占据空间
+        */
+        /* padding: 50px; */
+
+        /* 特殊2:border: 上下的border，会被撑起来，但是也不占据空间 */
+        /* border: 50px solid orange; */
+
+        /* 特殊3：margin: 上下的margin是不生效的 */
+        margin: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <span class="content">我是span元素</span>
+    啊啊啊啊啊啊啊
+
+    <!-- 这里div是紧挨着上面span元素的 -->
+    <div>hehehhehehe</div>
+  </body>
+</html>
