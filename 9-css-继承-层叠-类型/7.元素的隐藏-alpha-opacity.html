@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        /* 推荐写法 */
+        /* color: rgba(255, 0, 0, 0.5); */
+        /* 写法等价， 可以写成.5 */
+        color: rgba(255, 0, 0, .5);
+        /* 写法等价 */
+
+        /* 不透明，后面跟f */
+        /* color: #ff0000ff;  */
+        /* 透明0.5, f的一半8*/
+        /* color: #ff000088;  */
+
+        /* alpha通过背景颜色透明度来隐藏,只是设置了背景透明度 */
+        /* background-color: rgba(0, 0, 0, 0) */
+      }
+
+      .box2 {
+        /* 背景设置透明，上面的东西也跟着出现透明的效果, 会携带所有子元素，包括图片等 */
+        /* opacity: 0; */
+        /* opacity: 1; */
+        opacity: 0.5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      我是div元素
+      <img src="../images/muxing.jpg" alt="" />
+    </div>
+
+    <div class="box2">我是div元素
+      <img src="../images/muxing.jpg" alt="" />
+    </div>
+  </body>
+</html>

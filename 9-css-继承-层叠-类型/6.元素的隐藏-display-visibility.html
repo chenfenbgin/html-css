@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        /* 不占据空间 */
+        display: none;
+      }
+
+      .content {
+        /* 隐藏了，但依然占据空间 */
+        visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">我是div元素</div>
+
+    <!-- 下面这个元素会顶上去，display:none, 上面的是不占据空间的 -->
+    <div>我是div元素</div>
+
+    <div class="content">我是content元素</div>
+    <div>呵呵呵呵</div>
+  </body>
+</html>

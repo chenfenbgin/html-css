@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        background-color: red;
+        width: 200px;
+        height: 200px;
+      }
+
+      span {
+        background-color: blue;
+
+        width: 200px;
+        height: 200px;
+      }
+
+      img {
+        width: 200px;
+        height: 200px;
+      }
+
+      input {
+        height: 66px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- h1/p/div/span/a/img -->
+    <!-- 问题： 每个元素在页面当中到底占据多大空间 -->
+    <!-- 某些元素非常重要：       独占一行 -> 类型： 块级元素
+       某些元素相对不是很重要:   没必要独占 -> 类型： 行内级元素
+    -->
+
+    <div>我是div元素</div>
+
+    <span>我是span元素</span>
+
+    <!-- 行内级元素不可以设置宽度和高度？？ -> 不严谨 ，应该改为 行内非替换元素不可以设置宽高-->
+    <!-- 因为img元素， 不仅是inline元素，还是replace元素，即行内替换元素
+         行内替换元素：
+            1. 和其他的行内级元素在同一行显示
+            2. 可以设置宽度和高度
+    -->
+    <img src="../images/gouwujie01.jpg" alt="" />
+    <input type="text" />
+  </body>
+</html>
