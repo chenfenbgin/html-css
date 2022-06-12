@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        text-align: center;
+        /* 两个边框折叠成一个边框 */
+        border-collapse: collapse;
+      }
+      td, th{
+        border: 1px solid #333;
+        padding: 8px 16px;
+      }
+
+      table thead tr:nth-child(1) {
+        font-weight: 700;
+        color: red
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <th>排名</th>
+        <th>名称</th>
+        <th>价格</th>
+        <th>涨幅</th>
+      </thead>
+      <tr>
+        <td>1</td>
+        <td>贵州茅台</td>
+        <td>400</td>
+        <td>1%</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>五粮液</td>
+        <td>400</td>
+        <td>1%</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>老窖</td>
+        <td>400</td>
+        <td>1%</td>
+      </tr>
+    </table>
+  </body>
+</html>

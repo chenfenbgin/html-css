@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        text-align: center;
+      }
+      td {
+        border: 1px solid red;
+        width: 120px;
+        height: 40px;
+      }
+      /* table tr:nth-child(1), table tr:nth-child(2) {
+        font-weight: 700px;
+        font-size: 20px;
+      } */
+      /* 等价于上面的方法
+         n的取值：0 和 整数, 负数浏览器不会再处理
+         0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+      */
+      table tr:nth-child(-n + 2) {
+        font-weight: 900px;
+        font-size: 20px;
+        color: blue;
+      }
+
+      table tr td[rowspan] {
+        color: gold;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td colspan="6">课程表</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>星期一</td>
+        <td>星期二</td>
+        <td>星期三</td>
+        <td>星期四</td>
+        <td>星期五</td>
+      </tr>
+      <tr>
+        <td rowspan="5">上午</td>
+        <td>数学</td>
+        <td>数学</td>
+        <td>数学</td>
+        <td>数学</td>
+        <td>数学</td>
+      </tr>
+      <tr>
+        <td>数学</td>
+        <td>数学</td>
+        <td>数学</td>
+        <td>数学</td>
+        <td>数学</td>
+      </tr>
+      <tr>
+        <td>数学</td>
+        <td>数学</td>
+        <td>数学</td>
+        <td>数学</td>
+        <td>数学</td>
+      </tr>
+      <tr>
+        <td>数学</td>
+        <td>数学</td>
+        <td>数学</td>
+        <td>数学</td>
+        <td>数学</td>
+      </tr>
+      <tr>
+        <td>数学</td>
+        <td>数学</td>
+        <td>数学</td>
+        <td>数学</td>
+        <td>数学</td>
+      </tr>
+      <tr>
+        <td rowspan="4">下午</td>
+        <td>数学</td>
+        <td>数学</td>
+        <td>数学</td>
+        <td>数学</td>
+        <td>数学</td>
+      </tr>
+      <tr>
+        <td>数学</td>
+        <td>数学</td>
+        <td>数学</td>
+        <td>数学</td>
+        <td>数学</td>
+      </tr>
+      <tr>
+        <td>数学</td>
+        <td>数学</td>
+        <td>数学</td>
+        <td>数学</td>
+        <td>数学</td>
+      </tr>
+    </table>
+  </body>
+</html>
