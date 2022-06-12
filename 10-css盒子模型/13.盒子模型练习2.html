@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <style>
+      body {
+        text-align: center;
+      }
+      .item {
+        display: inline-block;
+
+        width: 234px;
+        height: 300px;
+        padding: 25px 10px;
+        box-sizing: border-box;
+
+        text-align: center;
+
+        background-color: #fff;
+      }
+
+      .item:hover {
+        box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      .item img {
+        width: 160px;
+        height: 160px;
+      }
+
+      .item .desc {
+        color: #999;
+
+        /* 单行显示省略号 */
+        /* white-space: nowrap; 不换行 */
+        /* overflow: hidden; 超出部分隐藏  */
+        /* text-overflow: ellipsis; 文本超出显示省略号 */
+
+        /* 多行显示省略号 */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        /* 利用 -webkit-box 属性，flex的前身吧*/
+        display: -webkit-box;
+        /* 保留两行 */
+        -webkit-line-clamp: 2;
+        /* 方向 */
+        -webkit-box-orient: vertical;
+      }
+
+      .item .price {
+        margin-top: 20px;
+        font-size: 14px;
+      }
+      .item .new-price {
+        color: #ff6700;
+      }
+      .item .old-price {
+        color: #999;
+        text-decoration: line-through;
+      }
+    </style>
+  </head>
+  <body>
+    <a class="item" href="https://www.mi.com/xiaomipad5pro" target="_blank">
+      <img src="../images/xiaomi" alt="" />
+      <p>小米手机12</p>
+      <p class="desc">
+        40dB宽频主动降噪 | HiFi高保真音质 | HRTF专业调音40dB宽频主动降噪 |
+        HiFi高保真音质 | HRTF专业调音40dB宽频主动降噪
+      </p>
+
+      <div class="price">
+        <span class="new-price">2399元</span>
+        <span class="old-price">2999元</span>
+      </div>
+    </a>
+  </body>
+</html>

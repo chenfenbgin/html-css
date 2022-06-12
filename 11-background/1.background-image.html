@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 600px;
+        /* 没有高度是没有效果出来的，就像在span设置背景一样，没有效果的 */
+        height: 600px;
+        background-color: #f00;
+
+        /* 设置背景图片 */
+        background-image: url(../images/xiaomi), url(../images/muxing.jpg);
+        background-repeat: no-repeat;
+        /* background-repeat: repeat-x, repeat-y, 在x轴、y轴平铺 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
