@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        /* background-color: #f00; */
+
+        /* border: 30px solid orange; */
+        /* 出现四个三角形 */
+        border: 50px solid orange;
+        border-right-color: transparent;/* transparent设置成透明 */
+        border-left-color: transparent;
+        border-top-color: transparent;
+        /* border-right-color: blue;
+        border-left-color: green;
+        border-top-color: red; */
+
+
+        /* 默认是content-box */
+        box-sizing: border-box;
+
+        /* 三角形是可以旋转的 */
+        transform-origin: center 25% ;/* 中心的点*/
+        transform: rotate(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

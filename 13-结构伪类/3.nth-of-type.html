@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 需求： 选择box中的div元素，并且是第三个div元素 */
+      .box > div:nth-child(3) {
+        color: red;
+      }
+
+      /* 需求： 选择box中的第三个div元素， 排除干扰项 */
+      .box > div:nth-of-type(3) {
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div>列表元素1</div>
+      <p>我是p元素</p>
+      <span>span元素1</span>
+      <span>span元素2</span>
+      <span>span元素3</span>
+      <div>列表元素2</div>
+      <div>列表元素3</div>
+      <div>列表元素4</div>
+      <div>列表元素5</div>
+      <div>列表元素6</div>
+      <div>列表元素7</div>
+      <div>列表元素8</div>
+      <div>列表元素9</div>
+      <div>列表元素10</div>
+    </div>
+  </body>
+</html>

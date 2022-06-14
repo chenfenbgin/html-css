@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 选中ul子元素的第一个 */
+      ul li:nth-child(1) {
+        color: red;
+      }
+
+      /* 选中所有偶数， n的取值是0, 1, 2, 3, 4, 5...*/
+      ul li:nth-child(2n) {
+        color: blue;
+      }
+
+      /* 所有奇数 */
+      ul li:nth-child(2n + 1) {
+        color: orangered;
+      }
+
+      div > div:nth-child(4n + 1) {
+        color: pink;
+      }
+      div > div:nth-child(4n + 2) {
+        color: tomato;
+      }
+      div > div:nth-child(4n + 3) {
+        color: chartreuse;
+      }
+      div > div:nth-child(4n + 4) {
+        color: gold;
+      }
+
+      /* 前5个 */
+      div > div:nth-child(-n + 5) {
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>列表元素1</li>
+      <li>列表元素2</li>
+      <li>列表元素3</li>
+      <li>列表元素4</li>
+      <li>列表元素5</li>
+      <li>列表元素6</li>
+    </ul>
+
+    <div>
+      <div>列表元素1</div>
+      <div>列表元素2</div>
+      <div>列表元素3</div>
+      <div>列表元素4</div>
+      <div>列表元素5</div>
+      <div>列表元素6</div>
+      <div>列表元素7</div>
+      <div>列表元素8</div>
+      <div>列表元素9</div>
+      <div>列表元素10</div>
+    </div>
+  </body>
+</html>
