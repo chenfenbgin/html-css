@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      .item {
+        width: 140px;
+        margin: 0 auto;
+      }
+
+      .item .top {
+        background-color: red;
+        position: relative;
+      }
+      /* 如果不加的话，会有一点红色 */
+      .item .top img {
+        /* 将图片下面的多出来的区域去除掉， 方法一：*/
+        /* vertical-align: top; */
+        /* 方法二： */
+        display: block;
+      }
+
+      .item .top .cover {
+        /* 这么写宽度和高度写死了，可以设置right bottom */
+        /* width: 140px;
+        height: 140px; */
+
+        /* 使用背景颜色盖上去 */
+        /* background-color: rgba(0, 0, 0, 0.5); */
+
+        /* 使用背景图片盖上去 */
+        background-image: url(../images/coverall.png);
+        background-position: 0 0;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      .item .top .info {
+        position: absolute;
+        bottom: 0;
+        /* 这里如果设置top:0，那就完全覆盖掉了 */
+        left: 0;
+        right: 0;
+        height: 27px;
+        font-size: 12px;
+        color: #ccc;
+        line-height: 27px;
+        padding-left: 10px;
+
+        /* background-color: rgba(0, 0, 0, .5); */
+        background-image: url(../images/top-cover.png);
+        background-position: 0 -537px;
+      }
+
+      .item .top .info .icon {
+        display: inline-block;
+        width: 14px;
+        height: 11px;
+        /* background-color: red; */
+        background-image: url(../images/iconall.png);
+        background-position: 0 -24px;
+      }
+
+      .item .top .info .icon-play {
+        display: inline-block;
+        width: 16px;
+        height: 17px;
+        background-image: url(../images/iconall.png);
+        background-position: 0 0;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto 0; 
+      }
+      .item .bottom {
+        display: block;
+        font-size: 14px;
+      }
+
+      .item .bottom:hover {
+        text-decoration: underline;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="item">
+      <div class="top">
+        <img src="../images/yujie.jpg" alt="御姐" />
+        <a
+          class="cover"
+          href="https://music.163.com/#/playlist?id=6948263379"
+        ></a>
+        <div class="info">
+          <i class="icon"></i>
+          <span>43333万</span>
+          <i class="icon-play"></i>
+        </div>
+      </div>
+      <a class="bottom" href="https://music.163.com/#/playlist?id=6948263379"
+        >还是会想你，特别是晚上哈哈哈哈哈哈</a
+      >
+    </div>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 800px;
+        height: 300px;
+        background-color: red;
+        position: relative;
+      }
+
+      .container {
+        height: 100px;
+        background-color: #0f0;
+
+        /* 如果不设置宽度，width:auto， */
+        /* width: 200px; */
+        width: 200px;
+        /* margin: 0 auto; */
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        /* 在包含块居中(包括水平垂直，用绝对定位居中，这种方式不存在兼容性问题) */
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="container"></div>
+    </div>
+  </body>
+</html>
