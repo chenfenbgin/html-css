@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: 0;
+      }
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: orange;
+        margin: 0 auto;
+      }
+      .item1,
+      .item2 {
+        background-color: #f00;
+      }
+
+      .item1 {
+        /* 采用定位的方式： 脱离标准流 */
+        /* position: fixed;
+        background-color: #0f0;
+        left: 0;
+        top: 10px; */
+
+        /* 浮动的方式脱离标准流，两种方式是不太一样的 */
+        float: left;
+        background-color: #0f0;
+      }
+
+      .item2 {
+        float: right;
+        background-color: #f00;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <!-- 往左、右，不会超出包含块边界 -->
+      <div class="item1">1</div>
+      <div class="item2">2</div>
+    </div>
+  </body>
+</html>
