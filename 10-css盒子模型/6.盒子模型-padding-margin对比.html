@@ -22,7 +22,8 @@
 
         /* 方式一： */
         /* box-sizing: border-box;
-        padding-left: 100px; */
+        padding-left: 100px;
+        padding-top: 100px; */
 
         /* 触发BFC */
         overflow: auto;
@@ -34,11 +35,11 @@
         background-color: #ff0;
 
         /* 方式二： 还有一种方法，就是margin-left,无须在设置box-sizing: border-box; */
-        margin-left: 100px;
         /* margin-left这种方法也是存在问题的，
           如果设置上面的margin-top:100px;会把属性传递给父元素
           可以使用overflow: auto
         */
+        margin-left: 100px;
         margin-top: 100px;
       }
     </style>
