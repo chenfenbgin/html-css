@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 500px;
+        height: 500px;
+        background-color: orange;
+
+        display: flex;
+        /* flex-wrap: wrap-reverse; */
+
+        /* flex-flow简写属性 */
+        flex-flow: wrap;
+        flex-flow: row wrap;
+      }
+      .item {
+        /* 6个，默认是放不下的，宽度会被压缩; 元素最终展示出来的宽度，和width有关系，但是没有必然性*/
+        width: 120px;
+        height: 120px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item1">1</div>
+      <div class="item item2">2</div>
+      <div class="item item3">3</div>
+      <div class="item item4">4</div>
+      <div class="item item5">5</div>
+      <div class="item item5">6</div>
+    </div>
+
+    <script src="./js/itemRandomColor.js"></script>
+  </body>
+</html>

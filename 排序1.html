@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <script>
+      const _getParams = (url) => {
+        // 补全代码
+        const index = url.indexOf("?");
+        if (index != -1) {
+          const str = url.slice(index + 1);
+          const arr = str.split("&");
+          let obj = {};
+          arr.forEach((item) => {
+            let i = item.split("=");
+            console.log(i[0], i[1]);
+            obj[i[0]] = i[1];
+          });
+          return obj;
+        }
+      };
+
+      _getParams("https://nowcoder.com/online?id=1&salas=1020");
+    </script>
+  </body>
+</html>
