@@ -1,0 +1,18 @@
+.mi_wrapper {
+  width: 1226px;
+  margin: 0 auto;
+}
+
+/* 清除浮动 */
+.clear_fix::after {
+  content: "";
+  display: block;
+  clear: both;
+
+  height: 0;
+  visibility: hidden;
+}
+/* 兼容早期的ie */
+.clear_fix {
+  *zoom: 1;
+}

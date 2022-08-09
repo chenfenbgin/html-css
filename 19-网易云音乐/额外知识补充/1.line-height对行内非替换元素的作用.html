@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        background-color: red;
+        color: white;
+
+        line-height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 我们没有设置高度，其实高度是有文字的行高撑起来的 -->
+    <!-- <div class="box">哈哈哈哈</div> -->
+
+    <!-- 换成span,观察line-height: 所以行高，是无法把一个行内非替换元素撑起来的 -->
+    <span class="box">哈哈哈哈</span>
+  </body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>网易云的top</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+
+    <style>
+      .top {
+        height: 70px;
+        background-color: #242424;
+        box-sizing: border-box;
+        border-bottom: 1px solid #000;
+      }
+
+      .topbar {
+        display: flex;
+        justify-content: space-between;
+
+        height: 69px;
+        /* 如果希望文字居中，可以使用line-height， 行高是可以被继承的 */
+        line-height: 69px;
+        /* align-items: center; 如果这么写的话，左右两边的高度，只是包裹了内容 */
+        /* 这里不可以使用align-item:center; */
+        /* background-color: #f00; */
+      }
+      .topbar .bar-left {
+        display: flex;
+      }
+      .topbar .bar-left .logo {
+        background-image: url(./img/topbar.png);
+      }
+      .topbar .bar-left .logo a {
+        /* text-indent: 对行内非替换元素是无效的，需要改成block; */
+        display: block;
+        width: 157px;
+        padding-right: 20px;
+        text-indent: -9999px;
+      }
+      .topbar .bar-left .list {
+        display: flex;
+      }
+      .topbar .bar-left .list .item {
+        position: relative;
+        /* 这里a元素是不会独占一行的，独占的是li里的 */
+        display: block;
+        color: #ccc;
+        padding: 0 19px;
+      }
+      .topbar .bar-left .list .item:hover,
+      .topbar .bar-left .list .item.active {
+        color: #fff;
+      }
+      .topbar .bar-left .list .item.active::after {
+        content: "";
+        position: absolute;
+        width: 12px;
+        height: 7px;
+        background-image: url(./img/topbar.png);
+        background-position: -226px 0;
+        bottom: -3px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+      }
+      .topbar .bar-left .list .item .icon-hot {
+        position: absolute;
+        /* width: 28px;
+        height: 19px; */
+        top: 14px;
+        right: -18px;
+        /* background: url(./img/topbar.png) -190px 0; */
+      }
+
+      /* 布局右侧 */
+      .topbar .bar-right {
+        display: flex;
+        align-items: center;
+        color: #ccc;
+      }
+      .topbar .bar-right .login a {
+        color: #787878;
+      }
+      .topbar .bar-right .login:hover a {
+        color: #ccc;
+      }
+      .topbar .bar-right .login a:hover {
+        color: #787878;
+        text-decoration: underline;
+      }
+
+      .topbar .bar-right .anthor a {
+        display: inline-block;
+        width: 90px;
+        height: 32px;
+        line-height: 32px;
+        margin: 0 20px;
+        text-align: center;
+        box-sizing: border-box;
+        color: #ccc;
+        border: 1px solid #4f4f4f;
+        border-radius: 20px;
+      }
+      .topbar .bar-right .anthor a:hover {
+        color: #fff;
+        border-color: #fff;
+      }
+
+      .topbar .bar-right .search {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 158px;
+        height: 32px;
+
+        box-sizing: border-box;
+        padding-right: 10px;
+        border-radius: 32px;
+        background-color: #fff;
+        background-image: url(./img/topbar.png);
+        background-position: 0 -99px;
+      }
+
+      .topbar .bar-right .search input {
+        width: 120px;
+        font-size: 12px;
+      }
+
+      /* nav */
+      .nav {
+        height: 35px;
+        line-height: 35px;
+        background-color: #c20c0c;
+        box-sizing: border-box;
+        border-bottom: 1px solid #a40011;
+        font-size: 12px;
+      }
+
+      .navbar {
+        /* background-color: #0f0; */
+        box-sizing: border-box;
+        padding-left: 180px;
+      }
+      .navbar .list {
+        display: flex;
+      }
+      .navbar .list .item {
+        display: inline-block;
+      }
+      .navbar .list .item span {
+        display: inline-block;
+        padding: 0 13px;
+        margin: 7px 17px;
+        height: 20px;
+        line-height: 20px;
+        color: #fff;
+        border-radius: 20px;
+      }
+
+      .navbar .list .item:hover span,
+      .navbar .list .item.active span {
+        background-color: #9B0909;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top">
+      <div class="topbar wrapper_01">
+        <!-- bar-left、bar-right，没有设置高度，所以height是:auto,在这个情况下，align-items是 normal=> stretch,拉伸的效果-->
+        <div class="bar-left">
+          <!-- 通常做法是logo包裹h1 -->
+          <h1 class="logo">
+            <a href="#">网易云音乐</a>
+          </h1>
+          <ul class="list">
+            <!-- ul>(li>a[href="#"].item)*6 -->
+            <li>
+              <a href="#" class="item active">发现音乐</a>
+            </li>
+            <li><a href="#" class="item">我的音乐</a></li>
+            <li>
+              <a href="#" class="item">关注</a>
+            </li>
+            <li>
+              <a href="#" class="item">商城</a>
+            </li>
+            <li>
+              <a href="#" class="item">音乐人</a>
+            </li>
+            <li>
+              <a href="#" class="item">
+                下载客户端
+                <i class="icon-hot topbar_sprite topbar_icon_hot"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bar-right">
+          <div class="search">
+            <input type="text" placeholder="音乐/视频/电台/用户" />
+          </div>
+          <div class="anthor">
+            <a href="#">创作者中心</a>
+          </div>
+          <div class="login">
+            <a href="#">登录</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav">
+      <div class="navbar wrapper_01">
+        <!-- 如果block元素中没有内容，那么line-height继承过来，也是不生效的 -->
+        <!-- aaa -->
+        <!-- ul>(li>a[href=''].item)*6 -->
+        <ul class="list">
+          <li><a href="#" class="item active"><span>推荐</span></a></li>
+          <li><a href="#" class="item"><span>排行榜</span></a></li>
+          <li><a href="#" class="item"><span>歌单</span></a></li>
+          <li><a href="#" class="item"><span>主播电台</span></a></li>
+          <li><a href="#" class="item"><span>歌手</span></a></li>
+          <li><a href="#" class="item"><span>新蝶上架</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

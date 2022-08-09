@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+
+    <style>
+      .dress {
+        /* background-color: orange; */
+        margin-top: 30px;
+      }
+      .dress .header {
+        height: 58px;
+        line-height: 58px;
+      }
+      .dress .header .left-area {
+        /* 3. 浮动的元素之间，是顶部对齐的  */
+        /* 4. 怎么让浮动的文本做居中显示：使用line-height:平分上下的行距 */
+        float: left;
+      }
+      .dress .header .right-area {
+        float: right;
+        font-size: 12px;
+      }
+
+      .dress .header .right-area .item:hover,
+      .dress .header .right-area .active {
+        padding: 3px 0;
+        border-bottom: 3px solid red;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mi_wrapper dress">
+      <!-- 1. 浮动的父级元素，写上清浮动 -->
+      <div class="header clear_fix">
+        <div class="left-area">
+          <!-- 2. h3默认是有padding，高度会撑起来 -->
+          <h3 class="title">智能穿戴</h3>
+        </div>
+        <div class="right-area">
+          <a class="hot item active" href="#">热门</a>
+          <a class="info item " href="#">穿戴</a>
+        </div>
+      </div>
+
+      <div class="list"></div>
+    </div>
+  </body>
+</html>
