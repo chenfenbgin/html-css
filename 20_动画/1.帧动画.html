@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        height: 100vh;
+        width: 100vw;
+        background: #34495e;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      main {
+        width: 100px;
+        height: 100px;
+        background-color: white;
+        /* 2.将动画运用到元素上 */
+        animation-name: cx;
+        /* 3. 设置动画执行时间 */
+        animation-duration: 2s;
+      }
+
+      /*  1. 定义帧 */
+      @keyframes cx {
+        /* 动画的起始 */
+        0% {
+          background-color: #fff;
+        }
+        50% {
+          /* 缩放两倍 */
+          transform: scale(2);
+        }
+        /* 动画的结束 */
+        100% {
+          background-color: red;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main></main>
+  </body>
+</html>

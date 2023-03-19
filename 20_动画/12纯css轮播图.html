@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        background-color: #808e9b;
+        display: grid;
+      }
+      main {
+        width: 400px;
+        height: 200px;
+        align-self: center;
+        justify-self: center;
+        /* 溢出隐藏 */
+        overflow: hidden;
+        position: relative;
+      }
+      section {
+        width: 1600px;
+        height: 200px;
+        display: grid;
+        grid-template: 1fr / repeat(4, 400px);
+        animation-name: slide;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: steps(4, end);
+      }
+      section:hover,
+      section:hover + ul::after {
+        animation-play-state: paused;
+      }
+      div {
+        /* 图片溢出隐藏 */
+        overflow: hidden;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      @keyframes slide {
+        to {
+          transform: translateX(-1600px);
+        }
+      }
+      @keyframes num {
+        to {
+          transform: translateX(200px);
+        }
+      }
+      ul {
+        width: 200px;
+        list-style: none;
+        position: absolute;
+        left: 50%;
+        bottom: 20px;
+        transform: translateX(-50%);
+        display: grid;
+        grid-template: 1fr / repeat(4, 1fr);
+        justify-items: center;
+      }
+
+      ul::after {
+        content: "";
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #f8efba;
+        position: absolute;
+        left: 10px;
+        top: 0;
+        z-index: -1;
+        animation-name: num;
+        animation-duration: 4s;
+        animation-timing-function: steps(4, end);
+        animation-iteration-count: infinite;
+      }
+      li {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #25ccf7;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        background: rgb(0, 0, 0, 0.3);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <div><img src="../images/avatar.png" alt="" /></div>
+        <div><img src="../images/menghuan.jpg" alt="" /></div>
+        <div><img src="../images/avatar.png" alt="" /></div>
+        <div><img src="../images/menghuan.jpg" alt="" /></div>
+      </section>
+
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
+    </main>
+  </body>
+</html>

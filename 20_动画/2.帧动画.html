@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        background-color: #2c3e50;
+      }
+
+      main {
+        width: 100vw;
+        height: 100vh;
+        background-color: #95a5a6;
+        transform: scale(0);
+        animation-name: scale,background, radius;
+        animation-duration: 2s;
+        /* 完之后停留, 可以设置填充模式， 停在最后一帧 */
+        animation-fill-mode: forwards;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      main::after {
+        content: 'chenfengbin.com';
+        font-size: 2em;
+        color: #4834d4;
+        opacity: 0;
+        animation-name: opacity;
+        animation-duration:2s;
+        /* 延迟2秒再走 */
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes opacity {
+        to {
+          opacity: 0.8;
+        }
+      }
+
+      @keyframes scale {
+        25% {
+          transform: scale(0.5);
+        }
+        50% {
+          /* rotate(360deg): 旋转360 */
+          transform: scale(1) rotate(360deg);
+        }
+        75% {
+          transform: scale(0.5);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      @keyframes background {
+        25% {
+          background-color: #1abc9c;
+        }
+        50% {
+          background-color: #3498db;
+        }
+        75% {
+          background-color: #8e44ad;
+        }
+      }
+
+      @keyframes radius {
+        25% {
+          border-radius: 50%;
+        }
+        50% {
+          border-radius: 0%;
+        }
+        50% {
+          border-radius: 50%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main></main>
+  </body>
+</html>

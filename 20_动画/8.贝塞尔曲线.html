@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        background-color: #808e9b;
+        display: grid;
+        /* 一行一列 */
+        grid-template-rows: 1fr/1fr;
+      }
+      ul {
+        list-style: none;
+        display: grid;
+        /* 一行五列 */
+        grid-template: 1fr / repeat(5, 1fr);
+        /* 间距 */
+        gap: 10px;
+      }
+      li {
+        background: #00a8ff;
+        height: 50px;
+        animation-name: move;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+      }
+      li:nth-child(1){
+        animation-timing-function: ease;
+      }
+      li:nth-child(2){
+        animation-timing-function: ease-in;
+      }
+      li:nth-child(3){
+        animation-timing-function: ease-out;
+      }
+      li:nth-child(4){
+        animation-timing-function: ease-in-out;
+      }
+      li:nth-child(5){
+        animation-timing-function: linear;
+      }
+      @keyframes move {
+        to {
+          transform: translateY(90vh)
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>ease</li>
+      <li>ease-in</li>
+      <li>ease-out</li>
+      <li>ease-in-out</li>
+      <li>linear</li>
+    </ul>
+  </body>
+</html>

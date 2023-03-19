@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>网易云-轮播图</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+
+    <style>
+      .banner {
+        height: 285px;
+        background-color: orange;
+        background: url(./img/banner_bg_01.jpg);
+        background-size: 6000px;
+        background-position: center center;
+      }
+
+      /* 图片列表 */
+      .banner .area {
+        position: relative;
+        height: 285px;
+        background-color: orange;
+      }
+      .banner .area .area-left {
+        width: 730px;
+        position: relative;
+      }
+      .banner .area-left .img-list {
+        /* 1.发现图片是从上往下排布，需要添加flex布局，使其左右拍 */
+        display: flex;
+        /* 3.水平排布之后，超出部分隐藏 */
+        overflow: hidden;
+      }
+      .banner .area-left .img-list li {
+        /* 2.但是排版之后发现，图片被压缩了，需要使用shrink */
+        flex-shrink: 0;
+        width: 100%;
+      }
+      .banner .area-left .img-list .item {
+        display: block;
+      }
+      .banner .area-left .img-list .item img {
+        width: 100%;
+        height: 285px;
+      }
+
+      /* 点列表 */
+      .banner .area-left .dots-list {
+        position: absolute;
+        bottom: 5px;
+        /* 这么写居中是居中不了的，这种居中有个前提，也有一个必须的宽度 */
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        display: flex;
+        /* 可以使用justify-content: center居中 */
+        justify-content: center;
+      }
+      .banner .area-left .dots-list li {
+        margin: 0 3px;
+      }
+      .banner .area-left .dots-list .item {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-color: red;
+        background: url(./img/banner-sprite.png) 3px -343px;
+      }
+      .banner .area-left .dots-list .item.active,
+      .banner .area-left .dots-list .item:hover {
+        background-position: -16px -343px;
+      }
+
+      /* 右侧的内容 */
+      .banner .area-right {
+        /* 这里我们没有设置高度，有两种方式可以设置高度 */
+        /* 方式1：height: 285px; */
+        /* 方式2：top: 0; bottom: 0; 这里高度会进行拉伸 */
+        /* 方式3：top: 0; height: 100%; 这里高度会进行拉伸 */
+        position: absolute;
+        /* 有一像素是出去的，有一像素盖在轮播图上 */
+        right: -1px;
+        /* 这里其实是在设置高度了 */
+        top: 0;
+        bottom: 0;
+        width: 254px;
+        background-color: purple;
+        background: url(./img/banner-right.png);
+      }
+      .banner .area-right .download {
+        display: block;
+        width: 215px;
+        height: 56px;
+        margin: 186px 0 0 19px;
+        text-indent: -9999px;
+      }
+      .banner .area-right .download:hover {
+        background: url(./img/banner-right.png) 0 -290px;
+      }
+      .banner .area-right .desc {
+        margin-top: 10px;
+        text-align: center;
+        font-size: 12px;
+        color: #8d8d8d;
+      }
+
+      /* 两个控制按钮 */
+      .banner .area .control {
+        width: 37px;
+        height: 63px;
+        position: absolute;
+        /* 居中显示 */
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        background-color: red;
+        background: url(./img/banner-sprite.png);
+      }
+      .banner .area .control.left {
+        left: -70px;
+        background-position: 0 -360px;
+      }
+      .banner .area .control.left:hover {
+        background-position: 0 -430px;
+      }
+      .banner .area .control.right {
+        right: -70px;
+        background-position: 0 -508px;
+      }
+      .banner .area .control.right:hover {
+        background-position: 0 -578px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="banner">
+      <div class="area wrapper_03">
+        <div class="area-left">
+          <ul class="img-list">
+            <li>
+              <a class="item" href="#">
+                <img src="./img/banner_01.jpg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a class="item" href="#">
+                <img src="./img/banner_01.jpg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a class="item" href="#">
+                <img src="./img/banner_01.jpg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a class="item" href="#">
+                <img src="./img/banner_01.jpg" alt="" />
+              </a>
+            </li>
+          </ul>
+          <ul class="dots-list">
+            <li><a class="item active" href="#"></a></li>
+            <li><a class="item" href="#"></a></li>
+            <li><a class="item" href="#"></a></li>
+            <li><a class="item" href="#"></a></li>
+            <li><a class="item" href="#"></a></li>
+            <li><a class="item" href="#"></a></li>
+            <li><a class="item" href="#"></a></li>
+            <li><a class="item" href="#"></a></li>
+            <li><a class="item" href="#"></a></li>
+            <li><a class="item" href="#"></a></li>
+          </ul>
+        </div>
+
+        <div class="area-right">
+          <a class="download" href="#">下载客户端</a>
+          <p class="desc">pc 安卓 iphone WP iPad Mac 六大客户端</p>
+        </div>
+
+        <a class="control left" href="#"></a>
+        <a class="control right" href="#"></a>
+      </div>
+    </div>
+  </body> 
+</html>
