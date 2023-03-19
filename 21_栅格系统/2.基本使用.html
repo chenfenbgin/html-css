@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      article {
+        width: 300px;
+        height: 100px;
+        border: 1px solid silver;
+        display: grid;
+        /* grid-template-rows: 50% 50%;
+        grid-template-columns: 20% 20% 20% 20% 20%; */
+        /* 简写  */
+        grid-template-rows: repeat(2, 50%);
+        grid-template-columns: repeat(5, 20%);
+      }
+      div {
+        /* 栅格还是100*100， 如果不指定宽高的话，会撑满整个栅格 */
+        /* width: 50px;
+        height: 50px; */
+        background-color: #5352ed;
+        background-clip: content-box;
+        border-collapse: collapse;
+        border: solid 1px  #ff4757;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+    </article>
+  </body>
+</html>
