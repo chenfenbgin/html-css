@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      main {
+        position: absolute;
+        /* 
+            这么做是为了居中
+            left: 50%;
+            top: 50%;
+            margin-left: -200px;
+            margin-top: -200px;
+        */
+        left: 50%;
+        top: 50%;
+        margin-left: -200px;
+        margin-top: -200px;
+        width: 400px;
+        height: 400px;
+        border: 5px solid silver;
+      }
+      div {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        left: 50%;
+        top: 50%;
+        margin-left: -100px;
+        margin-top: -100px;
+      }
+      div:first-child {
+        background-color: #e056fd;
+      }
+      div:nth-child(2) {
+        background-color: #f9ca24;
+        /* 过渡 */
+        transition: 1s;
+      }
+      main:hover div:nth-child(2) {
+        /* 1. 单个方向 */
+        /* transform: translateX(200px); */
+        /* transform: translateY(-200%); */
+
+        /* 2. 多个方向： X轴 Y轴一起移动 */
+        /* transform: translateX(200px) translateY(-200%); */
+
+        /* 3. 简写 */
+        transform: translate(100%, 100%)
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div></div>
+      <div></div>
+    </main>
+  </body>
+</html>
